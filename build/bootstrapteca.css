@@ -1,0 +1,79 @@
+.container, .app-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.app-container {
+  background-color: #fff;
+  margin-top: 90px;
+  margin-bottom: 72px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+  max-width: 1000px;
+}
+.app-container header {
+  padding: 36px 40px 30px 40px;
+}
+.app-container section {
+  padding: 20px 40px;
+}
+.app-container .app-content {
+  position: relative;
+}
+.app-container .app-brand {
+  height: 71px;
+}
+.app-container .app-navbar {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.app-container .app-navbar .navbar-header {
+  width: 40%;
+}
+.app-container .app-navbar .navbar-brand {
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.app-navbar .app-breadcrumb {
+  background: none;
+  padding-left: 13px;
+  padding-top: 14px;
+  margin-bottom: 0px;
+  float: left;
+}
+.app-navbar .app-breadcrumb li + li:before {
+  content: ">";
+  padding: 0 7px;
+  color: rgba(0, 0, 0, 0.26);
+  font-weight: bold;
+}
+.app-navbar .app-breadcrumb a {
+  color: rgba(0, 0, 0, 0.54);
+}
+.app-navbar .app-breadcrumb img.app-icon {
+  width: 24px;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+
+.app-menu > li.active {
+  position: relative;
+}
+.app-menu > li.active::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #3565c1;
+}
+.app-menu > li.active > a {
+  background-color: transparent !important;
+  color: #3565c1 !important;
+}

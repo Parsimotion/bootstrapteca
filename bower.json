@@ -1,0 +1,20 @@
+{
+  "name": "bootstrapteca",
+  "version": "0.0.10",
+  "main": "build/bootstrapteca.css",
+  "ignore": [
+    "**/.*",
+    "_*",
+    "node_modules",
+    "compile",
+    "test",
+    "Gruntfile.coffee",
+    ".*"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
+}
