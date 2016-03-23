@@ -11,8 +11,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/lodash/lodash.js',
       'src/*.coffee',
       'test/specSetup.coffee',
       'test/spec/**/*.coffee'

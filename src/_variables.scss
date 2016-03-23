@@ -1,0 +1,37 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+$font-family-sans-serif:  'Open Sans', Helvetica, Arial, sans-serif;
+$font-family-base:        $font-family-sans-serif;
+$headings-font-family:    $font-family-base;
+
+$brand-primary: #3565c1;
+$brand-link: #216DFF;
+$brand-success: #53CD71;
+$brand-danger: #DE544F;
+$grid-columns: 48;
+
+$background-color: #e9eff3;
+$background-color-secondary: #fafafa;
+
+$gray-darker: rgba(0, 0, 0, 0.87);
+$gray-dark: rgba(0, 0, 0, 0.54);
+$gray: rgba(0, 0, 0, 0.26);
+$gray-light: rgba(0, 0, 0, 0.12);
+$gray-lighter: rgba(0, 0, 0, 0.07);
+
+$gray-base: $gray-darker;
+
+$link-color: $brand-link;
+
+
+$font-size-base: 12px;
+$font-size-h1: 41px;
+$font-size-h2: 28px;
+$font-size-h3: 22px;
+$font-size-h4: 18px;
+$font-size-h5: 13px;
+$font-size-h6: 12px;
+
+$shadow-depth-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.13);
+$shadow-depth-2: 0px 2px 6px 0px rgba(0,0,0,0.12);
