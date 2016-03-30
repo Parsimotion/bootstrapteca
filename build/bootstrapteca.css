@@ -1,4 +1,4 @@
-/* bootstrapteca - v0.0.17 - 2016-03-29 */
+/* bootstrapteca - v0.0.19 - 2016-03-30 */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -9793,4 +9793,27 @@ p {
   width: 400px;
   margin: 10px auto;
   padding: 6px 12px;
+  text-align: center; }
+
+.search-container {
+  position: relative; }
+  .search-container i.fa.fa-search {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color: #ccc; }
+  .search-container input.form-control.search {
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 26px;
+    padding-top: 8px; }
+    .search-container input.form-control.search::-webkit-input-placeholder {
+      color: #ccc; }
+
+.round-square {
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: inset 0 0 3px 0 rgba(207, 207, 207, 0.7);
+  margin: 15px 0;
+  padding: 10px 0;
   text-align: center; }
