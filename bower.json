@@ -1,6 +1,6 @@
 {
   "name": "bootstrapteca",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "main": "build/bootstrapteca.css",
   "ignore": [
     "**/.*",
