@@ -148,7 +148,7 @@ section {
       }
     }
     .list-footer {
-      text-align: center;
+      @extend .centered;
       .pagination {
         margin: 0px;
       }
@@ -212,8 +212,12 @@ p {
 
 // CUSTOM CLASES...
 
+.centered {
+  text-align: center;
+}
+
 .stick-left {
-  border-left: 1px solid $gray-lighter;
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .input-error {
@@ -221,10 +225,10 @@ p {
 }
 
 .error-alert {
+  @extend .centered;
   width: 400px;
   margin: 10px auto;
   padding: 6px 12px;
-  text-align: center;
 }
 
 .search-container {
@@ -247,10 +251,23 @@ p {
 }
 
 .round-square {
+  @extend .centered;
   border-radius: 4px;
   background-color: #FFFFFF;
   box-shadow: inset 0 0 3px 0 rgba(207,207,207,0.7);
   margin: 15px 0;
   padding: 10px 0;
-  text-align: center;
+}
+
+.item-title {
+  font-size: 14.95px;
+  color: $gray-darker;
+  line-height: 18.57px;
+  margin-bottom: 5px;
+}
+
+.item-sku {
+  font-size: 11px;
+  color: $gray-dark;
+  margin-bottom: 8px;
 }

@@ -1,4 +1,4 @@
-/* bootstrapteca - v0.0.20 - 2016-04-01 */
+/* bootstrapteca - v0.0.22 - 2016-04-04 */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -9739,10 +9739,8 @@ section {
     section.list .list-item a {
       font-size: 14px;
       font-weight: 500; }
-    section.list .list-footer {
-      text-align: center; }
-      section.list .list-footer .pagination {
-        margin: 0px; }
+    section.list .list-footer .pagination {
+      margin: 0px; }
 
 .clickable {
   cursor: pointer; }
@@ -9783,6 +9781,9 @@ p {
 .text-danger {
   color: #de544f; }
 
+.centered, section.list .list-footer, .error-alert, .round-square {
+  text-align: center; }
+
 .stick-left {
   border-left: 1px solid rgba(0, 0, 0, 0.07); }
 
@@ -9792,8 +9793,7 @@ p {
 .error-alert {
   width: 400px;
   margin: 10px auto;
-  padding: 6px 12px;
-  text-align: center; }
+  padding: 6px 12px; }
 
 .search-container {
   position: relative; }
@@ -9815,5 +9815,15 @@ p {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 3px 0 rgba(207, 207, 207, 0.7);
   margin: 15px 0;
-  padding: 10px 0;
-  text-align: center; }
+  padding: 10px 0; }
+
+.item-title {
+  font-size: 14.95px;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 18.57px;
+  margin-bottom: 5px; }
+
+.item-sku {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 8px; }
