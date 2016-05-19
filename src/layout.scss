@@ -11,10 +11,21 @@ body {
   box-shadow: $shadow-depth-1;
   max-width: 1000px;
   header {
-    padding: 36px 40px 30px 40px;
+    padding: 36px 40px 27px 48px;
   }
   section {
-    padding: 20px 40px;
+    padding: 12px 30px;
+    &.list {
+      padding: 0;
+    }
+  }
+  .loading-background {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: calc(100% + 30px);
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    margin-left: -15px;
   }
   .app-content {
     position: relative;
@@ -28,11 +39,14 @@ body {
     border-radius: 0;
     border-top: 1px solid $gray-lighter;
     border-bottom: 1px solid $gray-lighter;
+    min-height: 46px;
     .navbar-header {
       width: 40%;
     }
     .navbar-brand {
       border-right: 1px solid $gray-lighter;
+      height: 44px;
+      padding: 13.5px 15px 13.5px 20px;
     }
   }
 }
@@ -61,10 +75,13 @@ body {
 }
 
 .app-navbar {
+  .navbar-nav > li > a {
+    padding: 13.5px 19px;
+  }
   .app-breadcrumb {
     background: none;
-    padding-left: 13px;
-    padding-top: 14px;
+    padding-left: 15px;
+    padding-top: 13px;
     margin-bottom: 0px;
     float: left;
     li + li:before {
@@ -77,7 +94,7 @@ body {
       color: $gray-dark;
     }
     img.app-icon {
-      width: 24px;
+      width: 17px;
       margin-right: 5px;
       margin-top: -1px;
     }
@@ -85,6 +102,7 @@ body {
 }
 
 .app-menu {
+  padding-right: 15px;
   & > li.active {
     position: relative;
     &::before {
@@ -145,7 +163,7 @@ section {
     border-top: 1px solid $gray-lighter;
   }
   .title {
-    margin-bottom: 20px;
+    margin-top: 30px;
   }
   > form:first-of-type {
     padding-top: 20px;
@@ -163,6 +181,10 @@ section {
       padding-top: 16px;
       padding-bottom: 6px;
       color: $gray-dark;
+    }
+    .list-menu {
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
     .list-item {
       a {
@@ -183,6 +205,29 @@ section {
   cursor: pointer;
 }
 
+.right-margin {
+  margin-right: 4px;
+}
+
+#loading {
+  .main-loading {
+    color: #fafafa;
+    box-shadow: $shadow-depth-2;
+    background-color: #f0ad4e;
+    border-radius: 3px;
+    left: 50%;
+    padding: 5px 40px 8px;
+    position: absolute;
+    margin-left: -53px;
+    top: 74px;
+    z-index: 11;
+    span {
+      padding-left: 5px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}
 
 aside.button-container {
   width: 100%;
@@ -200,21 +245,85 @@ aside.button-container {
   }
 }
 
-.control-label {
-  font-weight: 700;
-  color: $gray-dark;
-}
-
 .form-horizontal {
-  .radio-container {
-    padding: 7px 0 0 12px;
-
-    label {
+  font-size: 13px;
+  .form-group {
+    .control-label {
+      font-weight: 700;
+      color: $gray-dark;
+      border-right: 1px solid rgba(0,0,0,0.12);
+      padding-top: 4px;
+      padding-bottom: 8px;
       padding-right: 10px;
     }
-    input.form-control {
-      margin-left: -12px;
+    div[class^="col-xs-"], div[class*=" col-xs-"] {
+      margin-left: -11px;
     }
+    .help {
+      padding-left: 2px;
+      i.fa {
+        font-size: 15px;
+        padding-top: 6px;
+        max-width: 335px;
+        &.fa-info-circle {
+          color: $brand-primary;
+        }
+      }
+      .help-title {
+        display: inline-block;
+        padding-left: 4px;
+        color: $gray-dark;
+        text-align: left;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .help-description {
+        font-size: 12px;
+        color: $gray-dark;
+        padding-left: 14px;
+        font-style: italic;
+      }
+    }
+  }
+  input.form-control {
+    border: 1px solid transparent;
+    height: auto;
+    padding: 3px 0px 3px 8px
+    &:hover {
+      border-color: $gray-light;
+    }
+    &:focus {
+      border-color: $brand-focus;
+    }
+  }
+  .radio-container {
+    padding: 0px 0px 0px 15px;
+    label {
+      border: 1px solid $gray-light;
+      border-radius: 3px;
+      padding: 3px 7px 4px 7px;
+      font-size: 13px;
+      margin-right: 5px;
+      &.radio-button {
+        &.selected {
+          border: 1px solid $gray;
+        }
+      }
+      input {
+        vertical-align: sub;
+      }
+    }
+    input.form-control {
+      font-size: 13px;
+    }
+  }
+  select {
+    border: 1px solid $gray-light;
+    border-radius: 3px;
+    font-size: 13px;
+    color: $gray-darker;
+    width: initial;
+    padding: 2px;
   }
 }
 
@@ -302,3 +411,50 @@ p {
   color: $gray-dark;
   margin-bottom: 8px;
 }
+
+.close-button {
+  font-size: 27px;
+}
+
+.btn {
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-weight: 400;
+  &.btn-wide {
+    padding: 5px 34px;
+  }
+  .glyphicon {
+    font-size: 0.75em;
+    top: 0;
+  }
+}
+
+.cancel-link {
+  color: $link-color;
+  font-weight: 600;
+}
+
+.dropdown {
+  .btn {
+    padding: 1px 7px 2px 7px;
+    background-color: transparent;
+  }
+  li {
+    a {
+      padding: 3px 13px;
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.sup-container {
+  border-radius: 3px;
+  box-shadow: $shadow-depth-2;
+  border: 1px solid $gray-light;
+  position: absolute;
+  background: #FFFFFF;
+}
+
