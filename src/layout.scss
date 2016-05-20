@@ -33,92 +33,6 @@ body {
   .app-brand {
     height: 71px;
   }
-  .app-navbar {
-    margin-bottom: 0;
-    border: none;
-    border-radius: 0;
-    border-top: 1px solid $gray-lighter;
-    border-bottom: 1px solid $gray-lighter;
-    min-height: 46px;
-    .navbar-header {
-      width: 40%;
-    }
-    .navbar-brand {
-      border-right: 1px solid $gray-lighter;
-      height: 44px;
-      padding: 13.5px 15px 13.5px 20px;
-    }
-  }
-}
-
-.pagination-container {
-  text-align: center;
-  margin-bottom: 100px;
-  padding-left: 10px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border: 1px solid #E7E7E7;
-  border-top: none;
-  .pagination {
-    margin: 12px 0;
-    font-size: 11px;
-    color: gray;
-    > li.active > a {
-      background-color: #757575;
-      border-color: #757575;
-      color: #fff;
-    }
-    > li > a {
-      color: gray;
-    }
-  }
-}
-
-.app-navbar {
-  .navbar-nav > li > a {
-    padding: 13.5px 19px;
-  }
-  .app-breadcrumb {
-    background: none;
-    padding-left: 15px;
-    padding-top: 13px;
-    margin-bottom: 0px;
-    float: left;
-    li + li:before {
-      content: ">";
-      padding: 0 7px;
-      color: $gray;
-      font-weight: bold;
-    }
-    a {
-      color: $gray-dark;
-    }
-    img.app-icon {
-      width: 17px;
-      margin-right: 5px;
-      margin-top: -1px;
-    }
-  }
-}
-
-.app-menu {
-  padding-right: 15px;
-  & > li.active {
-    position: relative;
-    &::before {
-      content: " ";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: $brand-primary;
-    }
-    & > a {
-      background-color: transparent !important;
-      color: $brand-primary !important;
-    }
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -205,44 +119,8 @@ section {
   cursor: pointer;
 }
 
-.right-margin {
+.inline-margin {
   margin-right: 4px;
-}
-
-#loading {
-  .main-loading {
-    color: #fafafa;
-    box-shadow: $shadow-depth-2;
-    background-color: #f0ad4e;
-    border-radius: 3px;
-    left: 50%;
-    padding: 5px 40px 8px;
-    position: absolute;
-    margin-left: -53px;
-    top: 74px;
-    z-index: 11;
-    span {
-      padding-left: 5px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-  }
-}
-
-aside.button-container {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: 1000;
-  left: 0;
-  > div {
-    @extend .container;
-    border-top: 1px solid $gray-lighter;
-    padding: 20px 40px;
-    background-color: white;
-    margin: 0 auto;
-    max-width: 1000px;
-  }
 }
 
 .form-horizontal {
@@ -331,13 +209,6 @@ p {
   max-width: 465px;
 }
 
-.sup-container {
-  border-radius: 3px;
-  box-shadow: $shadow-depth-2;
-  border: 1px solid $gray-light;
-  width: 290px;
-}
-
 .text-danger {
   color: $brand-danger;
 }
@@ -367,25 +238,6 @@ p {
   padding: 6px 12px;
 }
 
-.search-container {
-  position: relative;
-  i.fa.fa-search {
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    color: #ccc;
-  }
-  input.form-control.search {
-    border: 1px solid #eee;
-    border-radius: 0;
-    padding-left: 26px;
-    padding-top: 8px;
-    &::-webkit-input-placeholder {
-      color: #ccc;
-    }
-  }
-}
-
 .round-square {
   @extend .centered;
   border-radius: 4px;
@@ -411,50 +263,3 @@ p {
   color: $gray-dark;
   margin-bottom: 8px;
 }
-
-.close-button {
-  font-size: 27px;
-}
-
-.btn {
-  font-size: 13px;
-  border-radius: 3px;
-  padding: 5px 10px;
-  font-weight: 400;
-  &.btn-wide {
-    padding: 5px 34px;
-  }
-  .glyphicon {
-    font-size: 0.75em;
-    top: 0;
-  }
-}
-
-.cancel-link {
-  color: $link-color;
-  font-weight: 600;
-}
-
-.dropdown {
-  .btn {
-    padding: 1px 7px 2px 7px;
-    background-color: transparent;
-  }
-  li {
-    a {
-      padding: 3px 13px;
-      span {
-        font-size: 13px;
-      }
-    }
-  }
-}
-
-.sup-container {
-  border-radius: 3px;
-  box-shadow: $shadow-depth-2;
-  border: 1px solid $gray-light;
-  position: absolute;
-  background: #FFFFFF;
-}
-
