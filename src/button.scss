@@ -1,0 +1,53 @@
+aside.button-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  left: 0;
+  > div {
+    @extend .container;
+    border-top: 1px solid $gray-lighter;
+    padding: 20px 40px;
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+.close-button {
+  font-size: 27px;
+}
+
+.btn {
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-weight: 400;
+  &.btn-wide {
+    padding: 5px 34px;
+  }
+  .glyphicon {
+    font-size: 0.75em;
+    top: 0;
+  }
+}
+
+.cancel-link {
+  color: $link-color;
+  font-weight: 600;
+}
+
+.dropdown {
+  .btn {
+    padding: 1px 7px 2px 7px;
+    background-color: transparent;
+  }
+  li {
+    a {
+      padding: 3px 13px;
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+}

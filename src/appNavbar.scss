@@ -1,0 +1,40 @@
+.app-navbar {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid $gray-lighter;
+  border-bottom: 1px solid $gray-lighter;
+  min-height: 46px;
+  .navbar-header {
+    width: 40%;
+  }
+  .navbar-brand {
+    border-right: 1px solid $gray-lighter;
+    height: 44px;
+    padding: 13.5px 15px 13.5px 20px;
+  }
+  .navbar-nav > li > a {
+    padding: 13.5px 19px;
+  }
+  .app-breadcrumb {
+    background: none;
+    padding-left: 15px;
+    padding-top: 13px;
+    margin-bottom: 0px;
+    float: left;
+    li + li:before {
+      content: ">";
+      padding: 0 7px;
+      color: $gray;
+      font-weight: bold;
+    }
+    a {
+      color: $gray-dark;
+    }
+    img.app-icon {
+      width: 17px;
+      margin-right: 5px;
+      margin-top: -1px;
+    }
+  }
+}

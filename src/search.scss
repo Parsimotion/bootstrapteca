@@ -1,0 +1,18 @@
+.search-container {
+  position: relative;
+  i.fa.fa-search {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color: #ccc;
+  }
+  input.form-control.search {
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 26px;
+    padding-top: 8px;
+    &::-webkit-input-placeholder {
+      color: #ccc;
+    }
+  }
+}

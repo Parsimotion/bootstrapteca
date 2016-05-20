@@ -11,95 +11,27 @@ body {
   box-shadow: $shadow-depth-1;
   max-width: 1000px;
   header {
-    padding: 36px 40px 30px 40px;
+    padding: 36px 40px 27px 48px;
   }
   section {
-    padding: 20px 40px;
+    padding: 12px 30px;
+    &.list {
+      padding: 0;
+    }
+  }
+  .loading-background {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: calc(100% + 30px);
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    margin-left: -15px;
   }
   .app-content {
     position: relative;
   }
   .app-brand {
     height: 71px;
-  }
-  .app-navbar {
-    margin-bottom: 0;
-    border: none;
-    border-radius: 0;
-    border-top: 1px solid $gray-lighter;
-    border-bottom: 1px solid $gray-lighter;
-    .navbar-header {
-      width: 40%;
-    }
-    .navbar-brand {
-      border-right: 1px solid $gray-lighter;
-    }
-  }
-}
-
-.pagination-container {
-  text-align: center;
-  margin-bottom: 100px;
-  padding-left: 10px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border: 1px solid #E7E7E7;
-  border-top: none;
-  .pagination {
-    margin: 12px 0;
-    font-size: 11px;
-    color: gray;
-    > li.active > a {
-      background-color: #757575;
-      border-color: #757575;
-      color: #fff;
-    }
-    > li > a {
-      color: gray;
-    }
-  }
-}
-
-.app-navbar {
-  .app-breadcrumb {
-    background: none;
-    padding-left: 13px;
-    padding-top: 14px;
-    margin-bottom: 0px;
-    float: left;
-    li + li:before {
-      content: ">";
-      padding: 0 7px;
-      color: $gray;
-      font-weight: bold;
-    }
-    a {
-      color: $gray-dark;
-    }
-    img.app-icon {
-      width: 24px;
-      margin-right: 5px;
-      margin-top: -1px;
-    }
-  }
-}
-
-.app-menu {
-  & > li.active {
-    position: relative;
-    &::before {
-      content: " ";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: $brand-primary;
-    }
-    & > a {
-      background-color: transparent !important;
-      color: $brand-primary !important;
-    }
   }
 }
 
@@ -145,7 +77,7 @@ section {
     border-top: 1px solid $gray-lighter;
   }
   .title {
-    margin-bottom: 20px;
+    margin-top: 30px;
   }
   > form:first-of-type {
     padding-top: 20px;
@@ -163,6 +95,10 @@ section {
       padding-top: 16px;
       padding-bottom: 6px;
       color: $gray-dark;
+    }
+    .list-menu {
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
     .list-item {
       a {
@@ -183,50 +119,94 @@ section {
   cursor: pointer;
 }
 
-
-aside.button-container {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: 1000;
-  left: 0;
-  > div {
-    @extend .container;
-    border-top: 1px solid $gray-lighter;
-    padding: 20px 40px;
-    background-color: white;
-    margin: 0 auto;
-    max-width: 1000px;
-  }
-}
-
-.control-label {
-  font-weight: 700;
-  color: $gray-dark;
+.inline-margin {
+  margin-right: 4px;
 }
 
 .form-horizontal {
-  .radio-container {
-    padding: 7px 0 0 12px;
-
-    label {
+  font-size: 13px;
+  .form-group {
+    .control-label {
+      font-weight: 700;
+      color: $gray-dark;
+      border-right: 1px solid rgba(0,0,0,0.12);
+      padding-top: 4px;
+      padding-bottom: 8px;
       padding-right: 10px;
     }
-    input.form-control {
-      margin-left: -12px;
+    div[class^="col-xs-"], div[class*=" col-xs-"] {
+      margin-left: -11px;
     }
+    .help {
+      padding-left: 2px;
+      i.fa {
+        font-size: 15px;
+        padding-top: 6px;
+        max-width: 335px;
+        &.fa-info-circle {
+          color: $brand-primary;
+        }
+      }
+      .help-title {
+        display: inline-block;
+        padding-left: 4px;
+        color: $gray-dark;
+        text-align: left;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .help-description {
+        font-size: 12px;
+        color: $gray-dark;
+        padding-left: 14px;
+        font-style: italic;
+      }
+    }
+  }
+  input.form-control {
+    border: 1px solid transparent;
+    height: auto;
+    padding: 3px 0px 3px 8px;
+    &:hover {
+      border-color: $gray-light;
+    }
+    &:focus {
+      border-color: $brand-focus;
+    }
+  }
+  .radio-container {
+    padding: 0px 0px 0px 15px;
+    label {
+      border: 1px solid $gray-light;
+      border-radius: 3px;
+      padding: 3px 7px 4px 7px;
+      font-size: 13px;
+      margin-right: 5px;
+      &.radio-button {
+        &.selected {
+          border: 1px solid $gray;
+        }
+      }
+      input {
+        vertical-align: sub;
+      }
+    }
+    input.form-control {
+      font-size: 13px;
+    }
+  }
+  select {
+    border: 1px solid $gray-light;
+    border-radius: 3px;
+    font-size: 13px;
+    color: $gray-darker;
+    width: initial;
+    padding: 2px;
   }
 }
 
 p {
   max-width: 465px;
-}
-
-.sup-container {
-  border-radius: 3px;
-  box-shadow: $shadow-depth-2;
-  border: 1px solid $gray-light;
-  width: 290px;
 }
 
 .text-danger {
@@ -256,25 +236,6 @@ p {
   width: 400px;
   margin: 10px auto;
   padding: 6px 12px;
-}
-
-.search-container {
-  position: relative;
-  i.fa.fa-search {
-    position: absolute;
-    top: 9px;
-    left: 9px;
-    color: #ccc;
-  }
-  input.form-control.search {
-    border: 1px solid #eee;
-    border-radius: 0;
-    padding-left: 26px;
-    padding-top: 8px;
-    &::-webkit-input-placeholder {
-      color: #ccc;
-    }
-  }
 }
 
 .round-square {

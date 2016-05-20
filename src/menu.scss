@@ -1,0 +1,19 @@
+.app-menu {
+  padding-right: 15px;
+  & > li.active {
+    position: relative;
+    &::before {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $brand-primary;
+    }
+    & > a {
+      background-color: transparent !important;
+      color: $brand-primary !important;
+    }
+  }
+}
